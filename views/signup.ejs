@@ -1,0 +1,42 @@
+<%- include('partials/header'); -%>
+<form>
+    <h1>SIGN UP</h1>
+    <label for="fname">First Name</label>
+    <input type="text" name="fname" required>
+    <div class="fname error"></div>
+    <label for="sname">Second Name</label>
+    <input type="text" name="sname" required>
+    <div class="sname error"></div>
+    <label for="birth">Date Of Birth</label>
+    <input type="date" name="birth" required>
+    <div class="birth error"></div>
+    <label for="email">Email</label>
+    <input type="text" name="email" required>
+    <div class="email error"></div>
+    <label for="pass">Password</label>
+    <input type="password" name="pass" required>
+    <div class="pass error"></div>
+    <label for="pass">Confirm Password</label>
+    <input type="password" name="pass" required>
+    <div class="fname error"></div>
+    <button>Sign Up</button>
+</form>
+
+<script>
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        //Get values
+    const email = form.email.value;
+    const password = form.pass.value;
+
+    console.log(email, password)
+    })
+
+</script>
+
+
+
+<%- include('partials/footer'); -%>
